@@ -1,14 +1,16 @@
 import React from 'react'
 
 
-const Form=()=>(
+
+const Form = (props) => (
 
 
+    <div>
 
-    <div></div>
+Form
 
 
-
+    </div>
 
 
 );

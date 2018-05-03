@@ -1,4 +1,7 @@
 import React from 'react'
+import Form from './Form'
+import List from './List'
+import Paper from './Paper'
 
 
 class MainComponent extends React.Component {
@@ -10,9 +13,14 @@ class MainComponent extends React.Component {
 
             <div>
 
+                <Paper>
 
+                    <Form/>
+                </Paper>
 
-
+                <Paper>
+                    <List/>
+                </Paper>
 
 
             </div>
@@ -25,4 +33,5 @@ class MainComponent extends React.Component {
 
 
 }
-    export default MainComponent
+
+export default MainComponent
