@@ -8,6 +8,9 @@ const Form = (props) => (
         <TextField id={'fn'}
 
         value={props.newContactProp.fullname}
+onChange={props.onNewContactChangeProp}
+
+
 
         />
         <hr/>

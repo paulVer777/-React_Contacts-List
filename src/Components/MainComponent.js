@@ -13,26 +13,32 @@ class MainComponent extends React.Component {
             {fullname: 'Vigo Mortensen', phone: '333 444 444', email: 'aragorn@onet.pl', uid: 'hgfh'}
         ],
 
-        newContact:{fullname:"g", phone:'223344', email:'jestes@',uid:Date.now()}
 
+        newContact: [
 
+            {fullname: "g"},
+            {phone: '223344'},
+            {email: 'jestes@'},
+            {uid: Date.now()}
+
+        ]
 
 
     };
 
 
-    onNewContactChange=(event,newvalue)=>(
+    onNewContactChange = (event, newvalue) => (
 
         this.setState({
 
-        newContact:fullname=newvalue;
+            newContact:[0].fullname=newvalue
 
         })
     );
 
-    addContact=(contact)=>(
+    addContact = (contact) => (
 
-alert("Add Contact")
+        alert("Add Contact")
 
 
     );
@@ -54,8 +60,10 @@ alert("Add Contact")
 
                 <Paper>
 
-                    <Form addContactProp={this.addContact}
+                    <Form
 
+                         onNewContactChangeProp={this.onNewContactChange}
+                        addContactProp={this.addContact}
                           newContactProp={this.state.newContact}
 
 
