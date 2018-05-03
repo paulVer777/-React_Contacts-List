@@ -14,6 +14,27 @@ class MainComponent extends React.Component {
         ]
     };
 
+
+    deleteContact=(contactuid)=>{
+
+        const newContacts= this.state.contacts.filter( contactv => contactuid !== contactv.uid );
+
+
+
+        this.setState({
+
+          contacts:newContacts
+
+
+        })
+
+
+
+
+
+
+    };
+
     render() {
 
         return (
@@ -29,7 +50,7 @@ class MainComponent extends React.Component {
                     <List
 
                     contactProp={this.state.contacts}
-                    deleteTaskProp={(uid)=>alert(uid)}
+                    deleteContactProp={this.deleteContact}
 
 
                     />

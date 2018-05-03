@@ -10,7 +10,7 @@ const Contact=(props)=>(
 
         primaryText={props.fullnameProp}
         secondaryText={props.phoneProp+", "+props.emailProp}
-        rightIcon={<Delete onClick={props.deleteTaskProp2}/>}
+        rightIcon={<Delete onClick={props.deleteContactProp2}/>}
 
 
     />

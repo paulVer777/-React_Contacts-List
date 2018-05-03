@@ -10,7 +10,7 @@ const List = (props) => (
             fullnameProp={contact.fullname}
             phoneProp={contact.phone}
             emailProp={contact.email}
-            deleteTaskProp2={() => props.deleteTaskProp(contact.uid)}
+            deleteContactProp2={() => props.deleteContactProp(contact.uid)}
 
         />)}
 
