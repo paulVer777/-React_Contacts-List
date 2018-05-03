@@ -8,31 +8,42 @@ class MainComponent extends React.Component {
 
     state = {
         contacts: [
-            {fullname: 'Mads Mikkelsen', phone: '333 444 444', email: 'mads@onet.pl',uid:'adasdaa'},
-            {fullname: 'Clint Eastwood', phone: '111 444 444', email: 'good@onet.pl',uid:'zxc'},
-            {fullname: 'Vigo Mortensen', phone: '333 444 444', email: 'aragorn@onet.pl',uid:'hgfh'}
-        ]
+            {fullname: 'Mads Mikkelsen', phone: '333 444 444', email: 'mads@onet.pl', uid: 'adasdaa'},
+            {fullname: 'Clint Eastwood', phone: '111 444 444', email: 'good@onet.pl', uid: 'zxc'},
+            {fullname: 'Vigo Mortensen', phone: '333 444 444', email: 'aragorn@onet.pl', uid: 'hgfh'}
+        ],
+
+        newContact:{fullname:"g", phone:'223344', email:'jestes@',uid:Date.now()}
+
+
+
+
     };
 
 
-    deleteContact=(contactuid)=>{
-
-        const newContacts= this.state.contacts.filter( contactv => contactuid !== contactv.uid );
-
-
+    onNewContactChange=(event,newvalue)=>(
 
         this.setState({
 
-          contacts:newContacts
-
+        newContact:fullname=newvalue;
 
         })
+    );
+
+    addContact=(contact)=>(
+
+alert("Add Contact")
 
 
+    );
 
+    deleteContact = (contactuid) => {
 
+        const newContacts = this.state.contacts.filter(contactv => contactuid !== contactv.uid);
 
-
+        this.setState({
+            contacts: newContacts
+        })
     };
 
     render() {
@@ -43,28 +54,30 @@ class MainComponent extends React.Component {
 
                 <Paper>
 
-                    <Form/>
+                    <Form addContactProp={this.addContact}
+
+                          newContactProp={this.state.newContact}
+
+
+                    />
+
+
                 </Paper>
 
                 <Paper>
                     <List
 
-                    contactProp={this.state.contacts}
-                    deleteContactProp={this.deleteContact}
-
+                        contactProp={this.state.contacts}
+                        deleteContactProp={this.deleteContact}
 
                     />
                 </Paper>
 
-
             </div>
-
 
         )
 
-
     }
-
 
 }
 

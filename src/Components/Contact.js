@@ -4,8 +4,6 @@ import Delete from 'material-ui/svg-icons/action/delete';
 
 const Contact=(props)=>(
 
-
-
     <ListItem
 
         primaryText={props.fullnameProp}
@@ -14,11 +12,6 @@ const Contact=(props)=>(
 
 
     />
-
-
-
-
-
 );
 
 export default Contact
