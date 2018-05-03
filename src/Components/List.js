@@ -1,23 +1,20 @@
 import React from 'react'
 import Contact from './Contact'
 
-const List=()=>(
+const List = (props) => (
 
+    <div>
 
+        {props.contactProp.map(contact => <Contact
 
-  <div>
+            fullnameProp={contact.fullname}
+            phoneProp={contact.phone}
+            emailProp={contact.email}
+            deleteTaskProp2={() => props.deleteTaskProp(contact.uid)}
 
-      <Contact fullname={"Ricky Martin"} contact={"555 333 444, Ricky@onet.pl"}/>
-      <hr/>
+        />)}
 
-
-
-
-  </div>
-
-
-
-
+    </div>
 
 );
 

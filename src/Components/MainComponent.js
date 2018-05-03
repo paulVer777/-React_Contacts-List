@@ -6,8 +6,15 @@ import Paper from './Paper'
 
 class MainComponent extends React.Component {
 
-    render() {
+    state = {
+        contacts: [
+            {fullname: 'Mads Mikkelsen', phone: '333 444 444', email: 'mads@onet.pl',uid:'adasdaa'},
+            {fullname: 'Clint Eastwood', phone: '111 444 444', email: 'good@onet.pl',uid:'zxc'},
+            {fullname: 'Vigo Mortensen', phone: '333 444 444', email: 'aragorn@onet.pl',uid:'hgfh'}
+        ]
+    };
 
+    render() {
 
         return (
 
@@ -19,7 +26,13 @@ class MainComponent extends React.Component {
                 </Paper>
 
                 <Paper>
-                    <List/>
+                    <List
+
+                    contactProp={this.state.contacts}
+                    deleteTaskProp={(uid)=>alert(uid)}
+
+
+                    />
                 </Paper>
 
 

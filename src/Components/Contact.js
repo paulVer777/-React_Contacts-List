@@ -8,9 +8,9 @@ const Contact=(props)=>(
 
     <ListItem
 
-        primaryText={props.fullname}
-        secondaryText={props.contact}
-        rightIcon={<Delete onClick={()=>alert("klik")}/>}
+        primaryText={props.fullnameProp}
+        secondaryText={props.phoneProp+", "+props.emailProp}
+        rightIcon={<Delete onClick={props.deleteTaskProp2}/>}
 
 
     />
