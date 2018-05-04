@@ -13,35 +13,29 @@ class MainComponent extends React.Component {
             {fullname: 'Vigo Mortensen', phone: '333 444 444', email: 'aragorn@onet.pl', uid: 'hgfh'}
         ],
 
+        newContactState:[
 
-        newContact: [
-
-            {fullname: "g"},
-            {phone: '223344'},
-            {email: 'jestes@'},
-            {uid: Date.now()}
-
-        ]
-
-
+            {fullname:'Al Pacino'},
+            {phone:'22'},
+            {email:'al@onet.eu'}
+]
     };
 
-
-    onNewContactChange = (event, newvalue) => (
+    contactAdder=(event,newvalue)=>{
 
         this.setState({
 
-            newContact:[0].fullname=newvalue
-
+            newContactState:[0].fullname=newvalue,
+             newContactState[1].phone=newvalue
+             [2].email=newvalue
         })
-    );
+    };
 
-    addContact = (contact) => (
+    addContact = () => {
 
-        alert("Add Contact")
+        alert("Dodano kontakt")
 
-
-    );
+    };
 
     deleteContact = (contactuid) => {
 
@@ -62,31 +56,23 @@ class MainComponent extends React.Component {
 
                     <Form
 
-                         onNewContactChangeProp={this.onNewContactChange}
+                        contactAdderProp={this.contactAdder}
                         addContactProp={this.addContact}
-                          newContactProp={this.state.newContact}
-
+                        newContactName={this.state.newContactState}
 
                     />
-
 
                 </Paper>
 
                 <Paper>
                     <List
-
                         contactProp={this.state.contacts}
                         deleteContactProp={this.deleteContact}
-
                     />
                 </Paper>
-
             </div>
-
         )
-
     }
-
 }
 
 export default MainComponent

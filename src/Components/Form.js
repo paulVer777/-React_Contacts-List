@@ -7,21 +7,20 @@ const Form = (props) => (
     <div>
         <TextField id={'fn'}
 
-        value={props.newContactProp.fullname}
-onChange={props.onNewContactChangeProp}
-
-
+           value={props.newContactName[0].fullname}
+                   onChange={props.contactAdderProp}
 
         />
         <hr/>
         <TextField id={'phone'}
 
-                   value={props.newContactProp.phone}
+                   value={props.newContactName[1].phone}
+
         />
         <hr/>
         <TextField id={'email'}
 
-                   value={props.newContactProp.email}
+                   value={props.newContactName[2].email}
 
         />
         <hr/>
