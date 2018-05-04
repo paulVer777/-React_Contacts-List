@@ -12,7 +12,7 @@ Create-React-App to manage contacts.
 Clone this repo:
 
 ```
-$ git clone https://github.com/groundberry/react-contact-list
+https://github.com/paulVer777/React_Contacts-List.git
 ```
 
 Install all dependancies:
