@@ -3,25 +3,40 @@ import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton';
 
 
+const style={
+        h1:{
+                textAlign:'center',
+                letterSpacing:'5px'
+        }
+};
+
 const Form = (props) => (
+
     <div>
+
+
+        <h1 style={style.h1}>Contacts list</h1>
+
+
         <TextField id={'fn'}
 
-           value={props.newContactName[0].fullname}
-                   onChange={props.contactAdderProp}
-
+                   value={props.newContactNameProp}
+                   onChange={props.contactAdderProp1}
+                   floatingLabelText={"Full name"}
         />
         <hr/>
         <TextField id={'phone'}
 
-                   value={props.newContactName[1].phone}
-
+                   value={props.newContactPhoneProp}
+                   onChange={props.contactAdderProp2}
+                   floatingLabelText={"Phone"}
         />
         <hr/>
         <TextField id={'email'}
 
-                   value={props.newContactName[2].email}
-
+                   value={props.newContactEmailProp}
+                   onChange={props.contactAdderProp3}
+                   floatingLabelText={"Email adress"}
         />
         <hr/>
         <RaisedButton

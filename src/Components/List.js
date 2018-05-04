@@ -1,9 +1,13 @@
 import React from 'react'
 import Contact from './Contact'
 
+
 const List = (props) => (
 
     <div>
+
+
+
 
         {props.contactProp.map(contact => <Contact
 
@@ -13,6 +17,8 @@ const List = (props) => (
             deleteContactProp2={() => props.deleteContactProp(contact.uid)}
 
         />)}
+
+
 
     </div>
 
