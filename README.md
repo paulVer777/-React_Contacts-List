@@ -1,3 +1,38 @@
+
+# Contact List
+
+Create-React-App to manage contacts.
+
+## Functionality
+
+- As a user, I can add a new contact to the list or remove the existing contacts.
+
+## Running the app
+
+Clone this repo:
+
+```
+$ git clone https://github.com/groundberry/react-contact-list
+```
+
+Install all dependancies:
+
+```
+$ npm install
+```
+
+Start the server:
+
+```
+$ npm start
+```
+
+And open the app in your browser at <http://localhost:3000/>.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
